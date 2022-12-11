@@ -1,2 +1,2 @@
-# cpp_GetCurrentWindowInfo
-GetCurrentWindowInfo by using c++
+# cpp_GetCurrentTabInfo
+GetCurrentTabInfo using c++
