@@ -5,7 +5,7 @@
 #include <iostream>
 
 bool keypress;
-int refresh;
+double refresh;
 HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 
 
@@ -109,10 +109,10 @@ void GetCurrentWZ()
 int getRefreshrate()
 {
 	system("cls");
-	std::cout << "Enter how fast you want the console to be refresh" << std::endl;
+	std::cout << "Enter refresh rate: Recommand (1)" << std::endl;
 	std::cout << "Input: ";
 	std::cin >> refresh;
-
+	refresh *= 100;
 	return refresh;
 }
 
@@ -122,9 +122,7 @@ bool checkwindow(HWND& window)
 	{
 		SetConsoleTextAttribute(hConsole, 91);
 		system("cls");
-		std::cout << "Last Error: " << GetLastError() << std::endl;
-		Sleep(1500);
-		system("cls");
+		std::cout << "Window Not Found!" << std::endl;
 		std::cout << "Program terminated in 1 second!" << std::endl;
 		Sleep(1000);
 		exit(-1);
